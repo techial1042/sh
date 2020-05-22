@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# curl sh.techial.top | bash
 
 sudo yum install wget curl zsh git htop nginx dnf nmap yum-utils -y
 
@@ -34,6 +35,9 @@ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/dock
 sudo yum install docker-ce docker-ce-cli containerd.io
 sudo systemctl start docker
 sudo systemctl enable docker
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # acme.sh
 yum install socat -y
