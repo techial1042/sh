@@ -35,4 +35,9 @@ sudo yum install docker-ce docker-ce-cli containerd.io
 sudo systemctl start docker
 sudo systemctl enable docker
 
+# acme.sh
+yum install socat -y
+curl  https://get.acme.sh | sh
+
+
 sudo yum upgrade -y
