@@ -8,8 +8,7 @@ sudo yum install wget curl zsh git htop nginx dnf nmap yum-utils vim -y
 systemctl --now disable postfix
 
 # nginx
-sudo systemctl start nginx
-sudo systemctl enable nginx
+sudo systemctl --now enable nginx
 
 # openjdk
 sudo yum install java-11-openjdk-devel -y
@@ -23,6 +22,7 @@ curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yu
 sudo yum install yarn -y
 
 # docker
+# https://docs.docker.com/engine/install/centos/
 sudo yum remove docker \
                   docker-client \
                   docker-client-latest \
@@ -33,8 +33,7 @@ sudo yum remove docker \
                   docker-engine
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum install docker-ce docker-ce-cli containerd.io
-sudo systemctl start docker
-sudo systemctl enable docker
+sudo systemctl --now enable docker
 
 # docker-compose 
 pip3 install docker-compose
@@ -44,7 +43,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # acme.sh
 yum install socat -y
-curl  https://get.acme.sh | sh
+curl https://get.acme.sh | sh
 
 
 sudo yum upgrade -y
