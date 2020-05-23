@@ -45,5 +45,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 yum install socat -y
 curl https://get.acme.sh | sh
 
+# diable selinux
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
 
 sudo yum upgrade -y
