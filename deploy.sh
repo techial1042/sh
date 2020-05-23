@@ -2,7 +2,7 @@
 
 # curl sh.techial.top | bash
 
-sudo yum install wget curl zsh git htop nginx dnf nmap yum-utils -y
+sudo yum install wget curl zsh git htop nginx dnf nmap yum-utils vim -y
 
 # email
 systemctl --now disable postfix
