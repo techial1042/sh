@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# curl sh.techial.top | bash
-
 sudo yum install epel-release bash-completion wget curl zsh git htop nginx dnf nmap yum-utils vim python3-setuptools -y
 
 # email
