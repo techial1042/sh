@@ -46,4 +46,8 @@ curl https://get.acme.sh | sh
 # diable selinux
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
 
+
+# neofetch
+sudo yum install dnf-plugins-core -y && sudo dnf copr enable konimex/neofetch -y && sudo dnf install neofetch -y
+
 sudo yum upgrade -y
